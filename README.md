@@ -1,1 +1,2 @@
-# zscript_rus_manual
+# ZScript Russian manual
+Попытка -- не пытка...
