@@ -1,5 +1,5 @@
 `Thinkers::ChangeStatNum()` из `Thinker::EStatnums`:
-```
+```C
   enum EStatnums
 	{
  		// Thinkers that don't actually think // У этих не запускаются такие функции, как, например, "Tick()".
@@ -33,5 +33,6 @@
 		STAT_SCRIPTS,							// The ACS thinker. This is to ensure that it can't tick before all actors called PostBeginPlay
 		STAT_BOT,								// Bot thinker
 		MAX_STATNUM = 127
-	}```
+	}
+```
 
