@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sed -i "s/^\s\+$//g" *
+sed -i "s/^\s\+$//g" *.md
