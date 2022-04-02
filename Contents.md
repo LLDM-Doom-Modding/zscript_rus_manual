@@ -102,7 +102,7 @@ _"Оно не работает!"_
 
 4.02 Список ошибок во время игры и варианты их решения ["Tried to read from address zero", "Division by zero", ...].
 
-4.03 Нестандартные/странные ошибки, рассинхронизации, вылеты [Actor.LinkToWorld(), CanCollideWith(), Thinker.STAT_STATIC, InputEvent()].
+4.03 Нестандартные/странные ошибки, рассинхронизации, вылеты [Actor.LinkToWorld(), CanCollideWith(), Thinker.STAT_STATIC, InputEvent(), "if ( target && OkayToSwitchTarget( target ) )"].
 
 ?+4.04 К кому можно обратиться за помощью.
 
