@@ -1,0 +1,112 @@
+version "2.4.0"
+
+class TestEventHandler: EventHandler {
+	const rapidSkyZReserve = 30.0;
+
+	SkyViewpoint rapidSkies;
+	double rightLevelBound, topLevelBound, leftLevelBound, bottomLevelBound;
+
+
+	void UpdateRapidSkypoint( void ) {
+		int reattemtsLimit = 200;
+		vector3 newSkyviewPos;
+		Sector pointsector;
+
+		// Sector portals frees in overrided "SkyViewpoint::OnDestroy()".
+		if ( rapidSkies )
+			rapidSkies.Destroy();
+
+		do {
+			newSkyviewPos = ( FRandom( leftLevelBound, rightLevelBound ), FRandom( bottomLevelBound, topLevelBound ), 0 );
+			pointsector = Sector.PointInSector( newSkyviewPos.xy );
+
+		} while ( !pointsector && ( pointsector.ceilingplane.d - pointsector.floorplane.d > rapidSkyZReserve * 2 ) && --reattemtsLimit <= 0 );
+
+		rapidSkies = SkyViewpoint( Actor.Spawn( "SkyViewpoint", newSkyviewPos ) );
+
+		if ( rapidSkies.pos.z - rapidSkyZReserve > rapidSkies.ceilingz )
+			rapidSkies.SetZ( rapidSkies.ceilingz - rapidSkyZReserve );
+
+		if ( rapidSkies.pos.z + rapidSkyZReserve < rapidSkies.floorz )
+			rapidSkies.SetZ( rapidSkies.floorz + rapidSkyZReserve );
+
+		rapidSkies.pitch = FRandom( -60.0, 60.0 );
+		rapidSkies.angle = FRandom( 0.0, 360.0 );
+	}
+
+
+	override void OnRegister() {
+		SetOrder( 987600 );
+		Super.OnRegister();
+	}
+
+	override void WorldThingSpawned( WorldEvent e ) {
+		Super.WorldThingSpawned( e );
+
+		if ( multiplayer && !level.time && e.Thing.bIsMonster && !( e.Thing.SpawnFlags & MTF_Single ) ) {
+			console.printf( "Multiplayer monster removed: " .. e.Thing.GetClassName() .. "." );
+
+			e.Thing.ClearCounters();
+			e.Thing.Destroy();
+		}
+	}
+
+	override void WorldThingDamaged( WorldEvent e ) {
+		if ( e.Thing && e.DamageSource ) { 
+			if ( e.Thing.bIsMonster )
+				e.Thing.bBright = !e.Thing.bBright;
+			else if ( e.Thing is "PlayerPawn" ) 
+				e.Thing.A_SetBlend( "002200", 0.5, e.Damage > 135 ? 135 : e.Damage );
+	    }
+
+		Super.WorldThingDamaged( e );
+	} // of override void WorldThingDamaged( WorldEvent e ) {}
+
+	override void WorldLoaded( WorldEvent e ) {
+		// Level borders locating:
+		rightLevelBound = -32768.0;
+		topLevelBound = -32768.0;
+		leftLevelBound = 32768.0;
+		bottomLevelBound = 32768.0;
+
+		for ( int i = 0; i < level.Vertexes.Size(); i++ ) {
+			vector2 vertexpos = level.Vertexes[ i ].p;
+
+			if ( vertexpos.y > topLevelBound )
+				topLevelBound = vertexpos.y;
+			else if ( vertexpos.y < bottomLevelBound )
+				bottomLevelBound = vertexpos.y;
+
+			if ( vertexpos.x > rightLevelBound )
+				rightLevelBound = vertexpos.x;
+			else if ( vertexpos.x < leftLevelBound )
+				leftLevelBound = vertexpos.x;
+		}
+
+		// Skyview point creating:
+		UpdateRapidSkypoint();
+
+		Super.WorldLoaded( e );
+	}
+
+	override void WorldTick() {
+		if ( !( level.maptime % 35 ) && !Random( 0, 4 ) )
+			UpdateRapidSkypoint();
+
+		rapidSkies.AddZ( 0.33 * sin( level.maptime * 2.0 ) );
+
+		Super.WorldTick();
+	}
+
+	override void ConsoleProcess( ConsoleEvent e ) {
+		if ( e.Name ~== "TestEvent" )
+			console.printf( "Proceed." );
+		else if ( e.Name ~== "AbortVM" )
+			ThrowAbortException( "Manual VM abort." );
+		else if ( e.Name ~== "ExitLevel" )
+			Exit_Normal( 0 );
+
+		Super.ConsoleProcess( e );
+	}
+
+} // of class TestEventHandler: EventHandler {}

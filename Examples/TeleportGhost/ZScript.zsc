@@ -1,0 +1,45 @@
+version "2.4.0"
+
+class ExtendedTeleportFogGhost: Actor {
+	vector2 distanceConst;
+
+	Default {
+		+NOGRAVITY;
+		+NOBLOCKMAP;
+		Translation "16:31=80:88", "48:69=80:88", "120:127=80:87", "96:103=80:87", "128:137=80:88", "144:151=80:87", "160:163=80:88", "224:231=80:88", "208:216=80:88", "192:199=80:88", "168:175=80:88", "250:252=80:88", "0:3=123:119", "5:8=117:122", "9:12=116:122", "13:15=112:120", "32:47=112:122", "70:79=112:123", "104:111=112:121", "138:143=112:119", "152:159=115:121", "164:167=112:123", "176:191=112:122", "200:207=112:123", "217:223=112:122", "232:239=112:123", "240:247=115:124", "248:255=116:124";
+		RenderStyle "Translucent";
+	}
+
+	override void PostBeginPlay() {
+		distanceConst = ( ( pos.x - target.pos.x ), ( pos.y - target.pos.y ) );
+		Super.PostBeginPlay();
+	}
+
+	override void Tick() {
+		angle = target.angle;
+		sprite = target.sprite;
+		frame = target.frame;
+		SetOrigin( ( target.pos.x + distanceConst.x, target.pos.y + distanceConst.y, pos.z ), false );
+
+		if ( ( alpha *= 0.95 ) < 0.05 )
+			Destroy();
+
+		Super.Tick();
+	}
+
+	States {
+	Spawn:
+		"####" "#" -1 Bright;
+		Stop;
+	}
+} // of class ExtendedTeleportFogGhost: Actor {}
+
+
+class ExtendedTeleportFog: TeleportFog replaces TeleportFog {
+	override void PostBeginPlay() {
+		if ( target && Distance2D( target ) > 64.0 )
+			Spawn( "ExtendedTeleportFogGhost", pos ).target = target;
+
+		Super.PostBeginPlay();
+	}
+} // of class ExtendedTeleportFog: TeleportFog replaces TeleportFog {}
