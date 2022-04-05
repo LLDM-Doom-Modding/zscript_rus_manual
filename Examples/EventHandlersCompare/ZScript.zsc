@@ -1,0 +1,58 @@
+version "2.4.0"
+
+class StaticEventHandler_Test: StaticEventHandler {
+	override void OnRegister() {
+		SetOrder( 1023 );
+		console.printf( GetClassName() .. "::OnRegister()" );
+		Super.OnRegister();
+	}
+
+	override void OnUnregister() {
+		console.printf( GetClassName() .. "::OnUnregister()" );
+		Super.OnUnregister();
+	}
+
+	override void WorldLoaded( WorldEvent e ) {
+		console.printf( GetClassName() .. "::WorldLoaded()" );
+		Super.WorldLoaded( e );
+	}
+
+	override void WorldUnloaded( WorldEvent e ) {
+		console.printf( GetClassName() .. "::WorldUnloaded()" );
+		Super.WorldUnloaded( e );
+	}
+
+	override void OnDestroy() {
+		console.printf( GetClassName() .. "::OnDestroy()" );
+		Super.OnDestroy();
+	}
+} // of class StaticEventHandler_Test: StaticEventHandler {}
+
+
+class EventHandler_Test: EventHandler {
+	override void OnRegister() {
+		SetOrder( 1023 );
+		console.printf( GetClassName() .. "::OnRegister()" );
+		Super.OnRegister();
+	}
+
+	override void OnUnregister() {
+		console.printf( GetClassName() .. "::OnUnregister()" );
+		Super.OnUnregister();
+	}
+
+	override void WorldLoaded( WorldEvent e ) {
+		console.printf( GetClassName() .. "::WorldLoaded()" );
+		Super.WorldLoaded( e );
+	}
+
+	override void WorldUnloaded( WorldEvent e ) {
+		console.printf( GetClassName() .. "::WorldUnloaded()" );
+		Super.WorldUnloaded( e );
+	}
+
+	override void OnDestroy() {
+		console.printf( GetClassName() .. "::OnDestroy()" );
+		Super.OnDestroy();
+	}
+} // of class EventHandler_Test: StaticEventHandler {}
