@@ -1,10 +1,21 @@
-# Файл для собственных примечаний
+# Файл временных примечаний
 
 Смысла его читать нет — данные из него будут периодически удаляться, и, в конце концов, он исчезнет и сам.
 
 ## Notes
 
 
+* * *
+
+1) Введение, статья вроде "Decorate для чайников".
+2) База: типы данных, синтаксические структуры, классы, ООП, модификаторы переменных, scoping system.
+3) `Actor`: описание, поля, методы, `Inventory`.
+4) Другие важные встроенные классы и структуры: `Object`, `Thinker`, `LevelLocals`, `TexMan`, `*Iterator`, ...
+5) `[Static]EventHandler`.
+6) Углубления и API: оптимизация, мультиплеер, соединение с ACS, работа с шейдерами.
+7) _[Rezerved]_.
+8) _[Rezerved]_.
+9) "Help me!"
 
 * * *
 
@@ -31,7 +42,7 @@ Consts:
         STAT_TRAVELLING,                        // An actor temporarily travelling to a new map
         STAT_STATIC,
 
-        // Thinkers that do think // Полноправные thinker'ы.
+        // Thinkers that do think // "Полноправные" объекты класса Thinker:
         STAT_FIRST_THINKING=32,
         STAT_SCROLLER=STAT_FIRST_THINKING,      // A DScroller thinker
         STAT_PLAYER,                            // A player actor
