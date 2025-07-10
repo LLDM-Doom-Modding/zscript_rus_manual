@@ -1,5 +1,19 @@
-# ZScript Russian manual
+---
+layout:
+  width: default
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: false
+  pagination:
+    visible: true
+---
 
-Попытка — не пытка...
+# Русскоязычное руководство по ZScript
 
-См. [оглавление](Contents.md).
+Основной репозиторий проекта: [https://github.com/LLDM-Doom-Modding/zscript\_rus\_manual/](https://github.com/LLDM-Doom-Modding/zscript_rus_manual/).
+
