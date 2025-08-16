@@ -1,0 +1,17 @@
+# Base: https://github.com/readthedocs/test-builds/blob/mkdocs-material/mkdocs.yml .
+
+site_name: ZScript Russian Manual
+
+# Set the site URL by using a Read the Docs environment variable:
+# https://docs.readthedocs.io/en/stable/reference/environment-variables.html
+site_url: !ENV READTHEDOCS_CANONICAL_URL
+
+# Set the Material for MkDocs theme
+theme:
+  name: readthedocs
+  # https://squidfunk.github.io/mkdocs-material/customization/
+  #custom_dir: docs/overrides
+
+# Include extra JS to setup Read the Docs addons integrations
+#extra_javascript:
+#  - javascripts/readthedocs.js
