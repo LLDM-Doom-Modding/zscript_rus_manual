@@ -1,4 +1,4 @@
-# Кратко о стейтах
+# Стейты
 
 Стейты позволяют анимировать, задавать задержки и исполнять функции в определённые моменты времени. Язык конфигурации стейтов очень похож на Decorate.
 
@@ -24,4 +24,4 @@ Spawn:
 }
 ```
 
-Подробнее вопрос можно изучить в статье [kak-na-samom-dele-rabotaet-steit-mashina.md](../vnutrennee-ustroistvo-zdoom/kak-na-samom-dele-rabotaet-steit-mashina.md "mention").
+Подробнее вопрос можно изучить в статье [kak-na-samom-dele-rabotaet-steit-mashina.md](../zdoom-internals/kak-na-samom-dele-rabotaet-steit-mashina.md "mention").
