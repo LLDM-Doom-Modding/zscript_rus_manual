@@ -1,3 +1,5 @@
+[TOC]
+
 # Table of contents
 
 * [Русскоязычное руководство по ZScript](README.md)
