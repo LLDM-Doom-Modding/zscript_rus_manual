@@ -45,19 +45,19 @@ Class HUDEventHandler: EventHandler{//Не забываем добавить х�
 		HUDFont SmallFnt = HUDFont.Create("SmallFont")//для этого нам сперва надо будет добавить переменную типа HUDFont (обычные шрифты функция не поддерживает)
 		//Советую называть переменные HUDFont отлично от глобальных шрифтов, чтобы последнии всё ещё были нам доступны (например для доступа к Font.StringWidth())
 		
-		Sb.DrawString(SmallFnt, "String in the left corner", (0, SmallFont.GetHeight)*Scale, Sb.DI_SCREEN_LEFT_TOP, Font.CR_WHITE, Scale:(1,1)*Scale);
+		Sb.DrawString(SmallFnt, "String in the left corner", (0, SmallFont.GetHeight())*Scale, Sb.DI_SCREEN_TOP|Sb.DI_TEXT_ALIGN_CENTER, Font.CR_WHITE, Scale:(1,1)*Scale);
 		
 		/*
 			Все функции отрисовки StatusBarCore имеют параметр flag, определяющий в каком месте экрана будет рисоваться объект.
 			
 			Также отдельные функции имеют дополнительные флаги связанные с отрисовкой объекта,
-			например, DrawString имеет 3 флага определяющих, как будет выровнен текст
+			например, DrawString имеет 3 флага определяющих, как будет выравнен текст
 			
-			DI_TEXT_ALIGN_LEFT - Текст будет выровнен по левому краю (по умолчанию)
-			DI_TEXT_ALIGN_CENTER - Текст будет выровнен по центру
-			DI_TEXT_ALIGN_RIGHT - Текст будет выровнен по правому краю
-			
-			
+			DI_TEXT_ALIGN_LEFT - Текст будет выравнен по левому краю (по умолчанию)
+			DI_TEXT_ALIGN_CENTER - Текст будет выравнен по центру
+			DI_TEXT_ALIGN_RIGHT - Текст будет выравнен по правому краю
 		*/
+		
+		
 	}
 }
