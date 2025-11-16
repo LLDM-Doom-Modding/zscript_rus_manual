@@ -9,7 +9,7 @@ site_url: !ENV READTHEDOCS_CANONICAL_URL
 docs_dir: manual
 
 
-# Experimental navigation tree:
+# Здесь можно задавать навигацию.
 #nav:
 #- Главная страница: index.md
 #- Работа со строками: basics-and-syntax/1.08_rabota_so_strokami.md
