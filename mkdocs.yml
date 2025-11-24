@@ -30,5 +30,11 @@ theme:
 markdown_extensions:
   - toc
 
+plugins:
+  - search
+#  - gen-files:
+#      scripts:
+#        - generate-toc.py
+
 exclude_docs:
     InternalNotes.md
