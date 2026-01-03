@@ -8,8 +8,11 @@ site_url: !ENV READTHEDOCS_CANONICAL_URL
 
 docs_dir: manual
 
+exclude_docs:
+  InternalNotes.md
 
-# Здесь можно задавать навигацию.
+
+# General navigation. Overrides auto-collected navigation tree.
 #nav:
 #- Главная страница: index.md
 #- Работа со строками: basics-and-syntax/1.08_rabota_so_strokami.md
@@ -18,14 +21,35 @@ docs_dir: manual
 # Set the site URL by using a Read the Docs environment variable:
 # https://docs.readthedocs.io/en/stable/reference/environment-variables.html
 
+
 theme:
-  name: readthedocs
-  # https://squidfunk.github.io/mkdocs-material/customization/
-  #custom_dir: docs/overrides
+  # https://squidfunk.github.io/mkdocs-material/
+  name: material
+  features:
+    - navigation.instant
+
+  # https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/
+  palette:
+    # Palette toggle for dark (default) mode:
+    - scheme : slate
+      primary: indigo
+      toggle :
+        icon : material/brightness-4
+        name : Switch to light mode
+
+    # Palette toggle for light mode:
+    - scheme : default
+      primary: black
+      toggle :
+        icon : material/brightness-7
+        name : Switch to dark mode
 
 # Include extra JS to setup Read the Docs addons integrations
 #extra_javascript:
 #  - javascripts/readthedocs.js
+
+extra_css:
+  - extra-stylesheets.css
 
 markdown_extensions:
   - toc
@@ -35,6 +59,3 @@ plugins:
 #  - gen-files:
 #      scripts:
 #        - generate-toc.py
-
-exclude_docs:
-    InternalNotes.md
