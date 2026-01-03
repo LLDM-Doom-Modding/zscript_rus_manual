@@ -25,6 +25,7 @@ exclude_docs:
 theme:
   # https://squidfunk.github.io/mkdocs-material/
   name: material
+  language: ru
   features:
     - navigation.instant
 
