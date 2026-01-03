@@ -45,15 +45,21 @@ theme:
         icon : material/brightness-7
         name : Switch to dark mode
 
-# Include extra JS to setup Read the Docs addons integrations
-#extra_javascript:
-#  - javascripts/readthedocs.js
 
 extra_css:
   - extra-stylesheets.css
 
+#extra_javascript:
+#  - javascript/readthedocs.js
+
+
+# Primarily from https://squidfunk.github.io/mkdocs-material/reference/
 markdown_extensions:
-  - toc
+  - abbr
+  - admonition
+  - def_list
+  - tables
+
 
 plugins:
   - search
