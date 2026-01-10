@@ -85,7 +85,7 @@
 
 
 * [Применение известных практик программирования к ZScript](vspomogatelnye-zadachi-i-drugie-temy/README.md)
-	* [Система логирования для больших проектов](vspomogatelnye-zadachi-i-drugie-temy/3.02_zhurnalirovanie.md) <!-- Описание со
+	* [Система логирования для больших проектов](vspomogatelnye-zadachi-i-drugie-temy/3.02_zhurnalirovanie.md) <!-- Пример системы логирования для крупного проекта. -->
 	* [Оптимизация кода](vspomogatelnye-zadachi-i-drugie-temy/optimizaciya-koda/README.md)	 <!-- Здесь же будет [Микрооптимизация критических участков](vspomogatelnye-zadachi-i-drugie-temy/optimizaciya-koda/mikrooptimizacii-kriticheskikh-uchastkov.md) со ссылкой на JIT-компиляцию и на то, что обычно нужны не микрооптимизации, а правильная архитектура. -->
 	* [Проверка эффективности кода. Бенчмарки](vspomogatelnye-zadachi-i-drugie-temy/optimizaciya-koda/benchmarki.md)
 	* [Автопроверка корректности кода. Покрытие и тестбенчи](vspomogatelnye-zadachi-i-drugie-temy/testbenchi.-vnutrennee-testirovanie.md) -->
