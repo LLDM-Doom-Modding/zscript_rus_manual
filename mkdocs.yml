@@ -5,7 +5,7 @@ site_description: Русскоязычное руководство по ZScript
 
 site_url: !ENV READTHEDOCS_CANONICAL_URL
 
-
+repo_url: https://github.com/LLDM-Doom-Modding/zscript_rus_manual/
 docs_dir: manual
 
 exclude_docs:
