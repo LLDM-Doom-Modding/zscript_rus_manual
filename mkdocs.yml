@@ -45,6 +45,11 @@ theme:
         icon : material/brightness-7
         name : Switch to dark mode
 
+  # Custom page 404. https://github.com/squidfunk/mkdocs-material/discussions/5018
+  custom_dir: theme_overrides
+  static_template:
+    - 404.html
+
 
 extra_css:
   - extra-stylesheets.css

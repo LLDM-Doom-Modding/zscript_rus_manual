@@ -1,0 +1,38 @@
+
+ {% extends "main.html" %} 
+  
+ <!-- Content --> 
+ {% block content %} 
+<style>
+.md-content a {
+	text-decoration: underline;
+}
+</style>
+<!-- <style>
+.md-content h1 {
+	color: DarkOrange
+}
+</style> -->
+
+   <h1>Страница не существует (404 — Not found)</h1>
+
+<!--
+Backlink from https://stackoverflow.com/questions/8814472/how-to-make-an-html-back-link.
+Posted by Bajrang, modified by community. See post 'Timeline' for change history
+Retrieved 2026-01-17, License - CC BY-SA 3.0
+-->
+   <p>(Можно сразу <a href="javascript:history.back()">вернуться назад</a>).</p>
+
+   <h2>Почему 404?</h2>
+
+   <p>Если Вы попали сюда с какой-то другой страницы руководства, то обычно есть два варианта:</p>
+   <p> 1. Ссылка на той странице указана неверно. Хорошо бы исправить, но кто ж узнает, что она сломана?<br>
+       2. Страница нужна, но пока не сделана. Есть шанс её создать!</p>
+   <p>Если с других мест — что ж, вероятно, Вам дали неверную или устаревшую ссылку.</p>
+
+   <h2>Ладно, что делать?</h2>
+   <p>В случае битой ссылки в тексте руководства желательно сообщить об ошибке, или, по возможности, даже сразу исправить. Для этого можно найти разработчиков в <a href="/1-Введение/1.4-Полезные_ссылки/">разделе "Полезные ссылки"</a> или зайти на <a href="https://github.com/LLDM-Doom-Modding/zscript_rus_manual/">репозиторий GitHub</a> (ссылка на него же есть в правой части верхней панели).</p>
+   <p>А в целом найти информацию можно <a href="/SUMMARY">в оглавлении</a> или <a href="javascript:javascript:document.getElementById('__search').click()">через строку поиска</a> (с клавиатуры можно открыть нажатием на "/").</p>
+
+ {% endblock %}
+ 
