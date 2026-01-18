@@ -1,8 +1,8 @@
 # Русскоязычное руководство по ZScript
 
-Сайт: [Русскоязычное руководство по ZScript на ReadTheDocs](https://zscript-rus-manual.readthedocs.io/), [страница содержания](https://zscript-rus-manual.readthedocs.io/latest/SUMMARY/)
+Сайт: [Русскоязычное руководство по ZScript](https://zscript-rus-manual.readthedocs.io/), [страница содержания](https://zscript-rus-manual.readthedocs.io/latest/SUMMARY/).
 
-Основной репозиторий проекта: [https://github.com/LLDM-Doom-Modding/zscript\_rus\_manual/](https://github.com/LLDM-Doom-Modding/zscript_rus_manual/).
+Основной репозиторий проекта: https://github.com/LLDM-Doom-Modding/zscript_rus_manual/.
 
 _Внимание! Текст находится в начале разработки. Пока что в нём будут встречаться неточности, совершенно непонятные формулировки, грамматические и, вероятно, фактические ошибки._
 
