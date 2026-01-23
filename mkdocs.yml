@@ -62,6 +62,7 @@ extra_css:
 markdown_extensions:
   - abbr
   - admonition
+  - attr_list
   - def_list
   - tables
 
@@ -74,6 +75,10 @@ markdown_extensions:
   - pymdownx.snippets
   - pymdownx.superfences
   - pymdownx.blocks.caption
+
+  # Permalinks next to headers: https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/?h=permalink#+toc.permalink
+  - toc:
+      permalink: true
 
 
 plugins:
