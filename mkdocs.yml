@@ -53,9 +53,13 @@ theme:
 
 extra_css:
   - extra-stylesheets.css
+  - https://unpkg.com/katex@0/dist/katex.min.css
 
-#extra_javascript:
-#  - javascript/readthedocs.js
+extra_javascript:
+  - extra-javascript.js
+  - https://unpkg.com/katex@0/dist/katex.min.js
+  - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
+  #- javascript/readthedocs.js
 
 
 # Primarily from https://squidfunk.github.io/mkdocs-material/reference/
@@ -79,6 +83,9 @@ markdown_extensions:
   # Permalinks next to headers: https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/?h=permalink#+toc.permalink
   - toc:
       permalink: true
+
+  - pymdownx.arithmatex:
+      generic: true
 
 
 plugins:
