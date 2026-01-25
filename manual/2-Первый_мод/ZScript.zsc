@@ -9,12 +9,12 @@ class MyActor: Actor replaces Zombieman {
 	States {
 	Spawn:
 		TLP2 A 16;
-		TLP2 BCD 2;
+		TLP2 BCD 3;
 		TLP2 A 16;
 		TLP2 B 6;
 
 		TLP2 C 16;
-		TLP2 DAB 2;
+		TLP2 DAB 3;
 		TLP2 C 16;
 		TLP2 B 6;
 		Loop;
