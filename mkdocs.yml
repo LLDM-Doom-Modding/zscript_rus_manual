@@ -28,6 +28,7 @@ theme:
   language: ru
   features:
     - navigation.instant
+    - navigation.indexes
 
   # https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/
   palette:

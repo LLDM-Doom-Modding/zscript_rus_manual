@@ -1,3 +1,14 @@
 .md-grid {
   max-width: 1440px;
 }
+
+.md-nav__icon {
+  border-radius: 100%;
+  height: 0.95rem;
+  transition: background-color .25s;
+  width: 1.57rem;
+}
+
+.md-nav__item:not(.md-nav__item--nested) {
+	filter: opacity(83%);
+}
