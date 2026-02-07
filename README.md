@@ -1,10 +1,10 @@
 # Русскоязычное руководство по ZScript
 
-Сайт: [Руководство по ZScript](https://zscript-rus-manual.readthedocs.io/). Там же есть [быстрый старт](https://zscript-rus-manual.readthedocs.io/latest/#быстрый-старт) и [страница содержания](https://zscript-rus-manual.readthedocs.io/latest/SUMMARY/).
+[Сайт руководства по ZScript](https://zscript-rus-manual.readthedocs.io/), там же есть [быстрый старт](https://zscript-rus-manual.readthedocs.io/latest/#быстрый-старт) и [страница содержания](https://zscript-rus-manual.readthedocs.io/latest/SUMMARY/).
 
 Основной репозиторий проекта: https://github.com/LLDM-Doom-Modding/zscript_rus_manual/.
 
-_Внимание! Текст находится в начале разработки. Проект находится на ранних стадиях разработки. Пока что в тексте статей будут встречаться комментарии, неточности, опечатки и неясные формулировки._
+_Внимание! Проект находится на ранних стадиях разработки. Пока что в тексте статей будут встречаться комментарии, неточности, опечатки и неясные формулировки._
 
 
 ## Как сообщить об ошибке или предложить вариант улучшения
