@@ -90,8 +90,8 @@ markdown_extensions:
       generic: true
 
 
-plugins:
-  - search
+#plugins:
+#  - search
 #  - gen-files:
 #      scripts:
 #        - generate-toc.py
