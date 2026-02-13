@@ -4,12 +4,15 @@
 
 Основной репозиторий проекта: https://github.com/LLDM-Doom-Modding/zscript_rus_manual/.
 
+Тема на Russian Doom Community (iddqd.ru): "[Разработка руководства по ZScript — анонс!](https://i.iddqd.ru/viewtopic.php?t=2845)".
+
+
 _Внимание! Проект находится на ранних стадиях разработки. Пока что в тексте статей будут встречаться комментарии, неточности, опечатки и неясные формулировки._
 
 
 ## Как сообщить об ошибке или предложить вариант улучшения
 
-Можно написать [в issues на GitHub](https://github.com/LLDM-Doom-Modding/zscript_rus_manual/issues), или в личные сообщения, или в каналы `#Русскоязычный мануал по ZScript. Канал разработки` / `#modding` на Discord-сервере Russian Doom Discord Community.
+Можно написать [в issues на GitHub](https://github.com/LLDM-Doom-Modding/zscript_rus_manual/issues), или в личные сообщения, или в каналы вроде `#modding` на русскоязычных Discord-серверах по Doom Community, или в [тему разработки на RDC](https://i.iddqd.ru/viewtopic.php?t=2845). Главное — чтобы информация не потерялась и чтобы кто-нибудь, кто может всё исправить, увидел сообщение.
 
 
 ## Как присоединиться
