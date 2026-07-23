@@ -70,3 +70,56 @@ Consts:
         MAX_STATNUM = 127
     }
 ```
+
+
+* * *
+
+"src/common/scripting/vm/vmframe.cpp":
+
+CVMAbortException::CVMAbortException(EVMAbortException reason, const char *moreinfo, va_list ap)
+{
+	SetMessage("VM execution aborted: ");
+	switch (reason)
+	{
+	case X_READ_NIL:
+		AppendMessage("tried to read from address zero.");
+		break;
+
+	case X_WRITE_NIL:
+		AppendMessage("tried to write to address zero.");
+		break;
+
+	case X_TOO_MANY_TRIES:
+		AppendMessage("too many try-catch blocks.");
+		break;
+
+	case X_ARRAY_OUT_OF_BOUNDS:
+		AppendMessage("array access out of bounds.");
+		break;
+
+	case X_DIVISION_BY_ZERO:
+		AppendMessage("division by zero.");
+		break;
+
+	case X_BAD_SELF:
+		AppendMessage("invalid self pointer.");
+		break;
+
+	case X_FORMAT_ERROR:
+		AppendMessage("string format failed.");
+		break;
+
+	case X_OTHER:
+		// no prepended message.
+		break;
+
+	default:
+	{
+		size_t len = strlen(m_Message);
+		mysnprintf(m_Message + len, MAX_ERRORTEXT - len, "Unknown reason %d", reason);
+		break;
+	}
+	}
+
+* * *
+
