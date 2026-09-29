@@ -12,7 +12,27 @@ _Внимание! Проект находится на ранних стади�
 
 ## Как сообщить об ошибке или предложить вариант улучшения
 
-Можно написать [в issues на GitHub](https://github.com/LLDM-Doom-Modding/zscript_rus_manual/issues), или в личные сообщения, или в каналы вроде `#modding` на русскоязычных Discord-серверах по Doom Community, или в [тему разработки на RDC](https://i.iddqd.ru/viewtopic.php?t=2845). Главное — чтобы информация не потерялась и чтобы кто-нибудь, кто может всё исправить, увидел сообщение.
+Можно написать [в issues на GitHub](https://github.com/LLDM-Doom-Modding/zscript_rus_manual/issues), или в личные сообщения разработчикам, или в каналы вроде `#modding` на русскоязычных Discord-серверах по Doom Community, или в [тему разработки на RDC](https://i.iddqd.ru/viewtopic.php?t=2845). Главное — чтобы информация не потерялась и чтобы кто-нибудь, кто может всё исправить, увидел сообщение.
+
+
+## Как править текст локально до отправки
+
+Для локальной сборки документации требуется:
+- Python не ниже v3.8.2
+- pip (менеджер пакетов Python) не ниже v20.0.2
+- Python-пакет "mkdocs" не ниже версии v1.6.1
+- Python-пакет "mkdocs-material" не ниже v9.6.4
+- Для удобной синхронизации репозитория — git не ниже v2.0.0
+
+Порядок действий:
+
+- [Установить Python и MkDocs](https://www.mkdocs.org/user-guide/installation/) (процесс установки Python на русском также есть [здесь](https://python-academy.org/ru/guide/python-installation))
+- [Установить MkDocs Material](https://squidfunk.github.io/mkdocs-material/getting-started/#with-pip-latest) (после установки Python обычно достаточно выполнить команду `pip install mkdocs-material`)
+- Опционально, но желательно [установить `git`](https://git-scm.com/book/ru/v2/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5-%D0%A3%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0-Git)
+- Получить репозиторий: или склонировать через `git clone https://github.com/LLDM-Doom-Modding/zscript_rus_manual/`, или [скачать напрямую и разархивировать](https://github.com/LLDM-Doom-Modding/zscript_rus_manual/archive/refs/heads/master-readthedocs.zip)
+- Запустить команду `mkdocs serve` в корне репозитория (там, где лежит файл "mkdocs.yml")
+
+_При возникновении сложностей при установке можно написать [по ссылкам раздела "Как сообщить об ошибке..."](#как-сообщить-об-ошибке-или-предложить-вариант-улучшения)._
 
 
 ## Как присоединиться
