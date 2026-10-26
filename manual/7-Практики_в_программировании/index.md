@@ -3,6 +3,7 @@
 !!! abstract "TODO"
 	Раздел находится в разработке.
 
+- [Структуры данных](7.1_Структуры-данных.md)
 - [Логирование](3.02_zhurnalirovanie.md)
 - [Оптимизация кода](optimizaciya-koda/index.md)
 	- [Микрооптимизации критических участков](optimizaciya-koda/mikrooptimizacii-kriticheskikh-uchastkov.md)
